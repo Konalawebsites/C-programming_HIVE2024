@@ -1,0 +1,96 @@
+MAINS PART C03
+
+00
+int     main(void)
+{
+        char    testword1[] = "similar";
+        char    testword2[] = "similar";
+        char    testword3[] = "AAAAAAAAA";
+        char    testword4[] = "GGGGGGGGG";
+
+        int             answer1;
+        int             answer2;
+        int             answer3;
+
+        answer1 = ft_strcmp(testword1, testword2);
+        answer2 = ft_strcmp(testword3, testword4);
+        answer3 = ft_strcmp(testword4, testword3);
+        printf("%d should print 0\n", answer1);
+        printf("%d should print minus\n", answer2);
+        printf("%d should print plus\n", answer3);
+}
+
+01
+int     main(void)
+{
+        char    testword1[] = "similar";
+        char    testword2[] = "simil";
+        char    testword3[] = "AAAAAAAAA";
+        char    testword4[] = "GGGGGGGGG";
+
+        int             answer1;
+        int             answer2;
+        int             answer3;
+
+        answer1 = ft_strncmp(testword1, testword2, 5);
+        answer2 = ft_strncmp(testword3, testword4, 8);
+        answer3 = ft_strncmp(testword4, testword3, 1);
+        printf("%d should print 0\n", answer1);
+        printf("%d should print minus\n", answer2);
+        printf("%d should print plus\n", answer3);
+}
+
+02
+int     main(void)
+{
+        char    dest[100] = "Hello, ";
+        char    src[] = "woooorld";
+
+        printf("Before concatenation:\n");
+        printf("dest: %s\n", dest);
+        printf("src: %s\n", src);
+        ft_strcat(dest, src);
+        printf("\nAfter concatenation:\n");
+        printf("dest: %s\n", dest);
+        return (0);
+}
+
+03
+int	main(void)
+{
+	char	dest[100] = "Hello, ";
+	char	src[] = "woooorld";
+	unsigned int	nb = 3;
+
+	printf("Before concatenation:\n");
+	printf("dest: %s\n", dest);
+	printf("src: %s\n", src);
+	ft_strncat(dest, src, nb);
+	printf("\nAfter concatenation:\n");
+	printf("dest: %s\n", dest);
+	return (0);
+}
+
+04
+int main(void)
+{
+    char str[100] = "gangstas paradise";
+    char to_find[] = "para";
+    char *answer;
+
+    printf("Before concatenation:\n");
+    printf("str: %s\n", str);
+    printf("to_find: %s\n", to_find);
+    answer = ft_strstr(str, to_find);
+    if (answer)
+    {
+        printf("answer: %s\n", answer);
+    }
+    else
+    {
+        printf("substring not found\n");
+    }
+}
+
+
+
